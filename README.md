@@ -8,13 +8,11 @@
   static propTypes = {
     className: PropTypes.string,
     value: PropTypes.array,
-    template: PropTypes.func,
     onChange: PropTypes.func,
   };
 
   static defaultProps = {
     value: [],
-    template: noop,
     onChange: noop,
   };
   
