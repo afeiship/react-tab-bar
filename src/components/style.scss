@@ -1,0 +1,48 @@
+.react-tab-bar{
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  font-size:10px;
+  height:5em;
+  &-item{
+    &[data-layout='inline']{
+      flex:1;
+    }
+
+    &[data-layout='float']{
+      position: relative;
+      top:-2em;
+      padding:1em;
+    }
+
+    &[data-layout='absolute']{
+      position: absolute;
+    }
+
+    .item{
+      &-icon{
+        position: relative;
+        .item-badge{
+          position: absolute;
+          top: -1em;
+          right: -1em;
+          height:1.4em;
+          min-width:1.4em;
+          line-height: 1.4em;
+          text-align: center;
+          background: #f00;
+          border-radius: 100px;
+          color: #fff;
+          font-size: 1em;
+        }
+      }
+      &-text{
+        display: block;
+        font-size:1em;
+      }
+    }
+  }
+}

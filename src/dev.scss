@@ -1,0 +1,99 @@
+*{margin: 0;padding:0;box-sizing: border-box;}
+ul,li{list-style: none;}
+
+.hello-react-tab-bar{
+
+  button{
+    border: none;
+    display: block;
+    width:100%;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    overflow: visible;
+    height: 42px;
+    border-radius: 5px;
+    color: #ffffff;
+    line-height: 42px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    background: #04be02;
+    margin-bottom: 15px;
+    &:active{
+      background: #3cc51f;
+    }
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+
+  .test-tab-bar{
+    position: fixed;
+    width:100%;
+    bottom:0;
+
+    .react-tab-bar-item{
+      &[data-layout='float']{
+        .item-icon{
+          padding:10px;
+          background: #eee;
+          border-radius: 100px;
+        }
+      }
+
+      &[data-layout='absolute']{
+        right: 14px;
+        top: -60px;
+        .item-icon{
+          background: #eee;
+          padding:10px;
+          border-radius: 100px;
+          border:1px solid #eee;
+        }
+      }
+    }
+  }
+
+  .item-text{
+    &[data-selected=true]{
+      color:#f00;
+    }
+  }
+  .item-icon{
+    vertical-align: middle;
+    display: inline-block;
+    >i{
+      width:22px;
+      height:22px;
+      display: inline-block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      vertical-align: middle;
+    }
+    .home{
+      background-image: url(assets/wp-bar-1.png);
+      &[data-selected=true]{
+        background-image: url(assets/wp-bar-1-1.png);
+      }
+    }
+    .photo{
+      background-image: url(assets/wp-bar-3.png);
+    }
+    .user{
+      background-image: url(assets/wp-bar-4.png);
+      &[data-selected=true]{
+        background-image: url(assets/wp-bar-4-1.png);
+      }
+    }
+    .time{
+      background-image: url(assets/wp-time-2.png);
+      &[data-selected=true]{
+        background-image: url(assets/wp-time-1.png);
+      }
+    }
+  }
+}
