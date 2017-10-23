@@ -9,6 +9,7 @@
   height:5em;
   &-item{
     &[data-layout='inline']{
+      position: relative;
       flex:1;
     }
 
@@ -22,24 +23,33 @@
       position: absolute;
     }
 
-    .item{
-      &-icon{
-        position: relative;
-        .item-badge{
-          position: absolute;
-          top: -1em;
-          right: -1em;
-          height:1.4em;
-          min-width:1.4em;
-          line-height: 1.4em;
-          text-align: center;
-          background: #f00;
-          border-radius: 100px;
-          color: #fff;
-          font-size: 1em;
-        }
+
+    &-bd{
+      position: relative;
+      display: inline-block;
+      .item-dot,
+      .item-badge{
+        position: absolute;
+        top: -0.8em;
+        right: -0.8em;
+        height:1.4em;
+        min-width:1.4em;
+        line-height: 1.4em;
+        text-align: center;
+        background: #f00;
+        border-radius: 100px;
+        color: #fff;
+        font-size: 1em;
       }
-      &-text{
+
+      .item-badge{
+        height:1.4em;
+        min-width:1.4em;
+        line-height: 1.4em;
+        z-index:2;
+      }
+
+      .item-text{
         display: block;
         font-size:1em;
       }

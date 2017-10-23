@@ -14,6 +14,7 @@ class App extends React.Component {
         type:'inline',
         icon:'home',
         text:'Home',
+        dot: true,
         badge: 2
       },
       {

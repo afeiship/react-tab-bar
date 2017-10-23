@@ -8,7 +8,7 @@
   static propTypes = {
     className: PropTypes.string,
     value: PropTypes.array,
-    onChange: PropTypes.func,
+    onChange: PropTypes.func
   };
 
   static defaultProps = {
@@ -32,6 +32,7 @@ class App extends React.Component {
         type:'inline',
         icon:'home',
         text:'Home',
+        dot: true,
         badge: 2
       },
       {

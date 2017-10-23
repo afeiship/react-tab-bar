@@ -13,7 +13,7 @@ export default class extends PureComponent{
   static propTypes = {
     className: PropTypes.string,
     value: PropTypes.array,
-    onChange: PropTypes.func,
+    onChange: PropTypes.func
   };
 
   static defaultProps = {
@@ -36,15 +36,18 @@ export default class extends PureComponent{
             const { selected,disabled } = item;
             return (
               <ReactSelectedItem data-layout={item.type} selected={selected} disabled={disabled} data={item} key={index} className="react-tab-bar-item">
-                <span className='item-icon'>
+                <div className="react-tab-bar-item-bd">
                   { !!item.badge && <cite className="item-badge">{item.badge}</cite> }
-                  <i className={item.icon} data-selected={!!selected} />
-                </span>
-                {
-                  !!item.text && <span className="item-text" data-selected={!!selected}>
-                  {item.text}
+                  { !!item.dot && <span className="item-dot" />}
+                  <span className='item-icon'>
+                    <i className={item.icon} data-selected={!!selected} />
                   </span>
-                }
+                  {
+                    !!item.text && <span className="item-text" data-selected={!!selected}>
+                    {item.text}
+                    </span>
+                  }
+                </div>
               </ReactSelectedItem>
             );
           })
