@@ -39,14 +39,8 @@ export default class extends PureComponent{
                 <div className="react-tab-bar-item-bd">
                   { !!item.badge && <cite className="item-badge">{item.badge}</cite> }
                   { !!item.dot && <span className="item-dot" />}
-                  <span className='item-icon'>
-                    <i className={item.icon} data-selected={!!selected} />
-                  </span>
-                  {
-                    !!item.text && <span className="item-text" data-selected={!!selected}>
-                    {item.text}
-                    </span>
-                  }
+                  <div className='item-icon'> <i className={item.icon} data-selected={!!selected} /> </div>
+                  <div className="item-text" data-selected={!!selected}> {item.text} </div>
                 </div>
               </ReactSelectedItem>
             );

@@ -1,6 +1,8 @@
 .react-tab-bar{
   display: flex;
   align-items: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
   position: relative;
   text-align: center;
   border-top: 1px solid #eee;
