@@ -23,6 +23,7 @@ export default class extends PureComponent{
   /*===properties end===*/
 
   _onChange = e =>{
+    console.log(e);
     const { onChange } = this.props;
     onChange(e);
   };
