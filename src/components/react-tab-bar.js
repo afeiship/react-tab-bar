@@ -30,7 +30,7 @@ export default class extends PureComponent{
   render(){
     const {className, template, value, onChange, ...props} = this.props;
     return (
-      <ReactSelectedItems type="radio" {...props} onChange={this._onChange} className={classNames('react-tab-bar', className)}>
+      <ReactSelectedItems type="other" {...props} onChange={this._onChange} className={classNames('react-tab-bar', className)}>
         {
           value.map((item, index) => {
             const { selected,disabled } = item;
@@ -39,7 +39,7 @@ export default class extends PureComponent{
                 <div className="react-tab-bar-item-bd">
                   { !!item.badge && <cite className="item-badge">{item.badge}</cite> }
                   { !!item.dot && <span className="item-dot" />}
-                  <div className='item-icon'> <i className={item.icon} data-selected={!!selected} /> </div>
+                  <div className="item-icon"> <i className={item.icon} data-selected={!!selected} /> </div>
                   <div className="item-text" data-selected={!!selected}> {item.text} </div>
                 </div>
               </ReactSelectedItem>

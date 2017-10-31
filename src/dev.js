@@ -44,7 +44,8 @@ class App extends React.Component {
   }
 
   _change = e =>{
-    this.setState({ value: e.target.value });
+    console.log(e);
+    // this.setState({ value: e.target.value });
   };
 
   render() {
