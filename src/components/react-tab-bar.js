@@ -22,9 +22,11 @@ export default class extends PureComponent{
   };
   /*===properties end===*/
 
-  _onChange = e =>{
+  _onChange = (inIndex, inEvent) =>{
     const { onChange } = this.props;
-    onChange(e);
+    const {target} = inEvent;
+    target.activeIndex = inIndex;
+    onChange({ target });
   };
 
   render(){
